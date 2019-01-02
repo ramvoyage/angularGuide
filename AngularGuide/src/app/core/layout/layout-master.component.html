@@ -15,15 +15,17 @@
           <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
       
                      <mat-list>
-                                  <mat-list-item> Pepper </mat-list-item>
+                                  <mat-list-item > Pepper </mat-list-item>
                                   <mat-list-item> Salt </mat-list-item>
                                   <mat-list-item> Paprika </mat-list-item>
                           </mat-list>
           </mat-sidenav>
       
           <mat-sidenav-content>
-      
+         <router-outlet>
+         </router-outlet>
           </mat-sidenav-content>
+
         </mat-sidenav-container>    
       
         <mat-toolbar class="example-footer" color="primary">Footer</mat-toolbar>
