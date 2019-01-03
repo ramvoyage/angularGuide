@@ -1,31 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MasterComponent } from './modules/master/master.component';
-import { MaterialDesignModule } from './materials.module';
-import { LayoutMaster } from './core/layout/layout-master.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { MaterialDesignModule } from './materials.module';
 import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardModule } from './core/dashboard/dashboard.module';
+import { LayoutModule } from './core/layout/layout.module';
+import { RegisterComponent } from './register/register.component';
+import { RouteModuleComponent } from './core/route-module/route-module.component';
+import { LoginModule } from './login/login.module';
+
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MasterComponent,
-    LayoutMaster,
-    LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RouteModuleComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MaterialDesignModule,
     FormsModule,
-    BrowserAnimationsModule
+    MaterialDesignModule,
+    AppRoutingModule,
+    DashboardModule,
+    LayoutModule,
+    LoginModule,
+    BrowserAnimationsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
