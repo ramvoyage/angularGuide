@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialDesignModule } from './materials.module';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { MasterComponent } from './modules/master/master.component';
-import { MaterialDesignModule } from './materials.module';
-import { LayoutMaster } from './core/layout/layout-master.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardModule } from './core/dashboard/dashboard.module';
+import { LayoutModule } from './core/layout/layout.module';
 import { RegisterComponent } from './register/register.component';
 
 
@@ -16,19 +17,19 @@ import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MasterComponent,
-    LayoutMaster,
-    LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RouteModuleComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MaterialDesignModule,
     FormsModule,
-    BrowserAnimationsModule
+    MaterialDesignModule,
+    AppRoutingModule,
+    DashboardModule,
+    LayoutModule,
+    LoginModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
