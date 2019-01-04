@@ -6,17 +6,18 @@ import {HeaderComponent} from '../layout/header/header.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: DashboardComponent },
-      { path: '1',component:HeaderComponent}
-    ]
+      {path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+      {path:'dashboard',component:DashboardComponent}
+   
+  ]
   }
 ];
 
 @NgModule({ 
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class DashboardRoutingModule { }

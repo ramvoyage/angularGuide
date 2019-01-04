@@ -11,13 +11,14 @@ import { LayoutModule } from './core/layout/layout.module';
 import { RegisterComponent } from './register/register.component';
 import { RouteModuleComponent } from './core/route-module/route-module.component';
 import { LoginModule } from './login/login.module';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
     RouteModuleComponent,
   ],
   imports: [
@@ -30,7 +31,6 @@ import { LoginModule } from './login/login.module';
     LayoutModule,
     LoginModule,
     BrowserAnimationsModule,
-  
   ],
   providers: [],
   bootstrap: [AppComponent]

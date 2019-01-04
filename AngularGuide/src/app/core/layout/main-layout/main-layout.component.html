@@ -1,4 +1,9 @@
-<ng-container>
+
+
+
+<!-- <ng-container>
+    <app-header>
+      </app-header>
     <mat-sidenav-container class="example-container">
       <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
 
@@ -11,4 +16,35 @@
     </mat-sidenav-content>
 
     </mat-sidenav-container>  
+</ng-container> -->
+
+<ng-container>
+    <mat-toolbar class="example-header" color="primary">
+
+            <span>Application Title</span>
+
+                    <span class="example-fill-remaining-space"></span>
+
+                    <span routerLink="/login">Login</span>
+                    <span routerLink="/register">Register</span>
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
+  
+                    <mat-list>
+                              <mat-list-item routerLink="/route"> Router </mat-list-item>
+                              <mat-list-item> Froms </mat-list-item>
+                              <mat-list-item> Directives </mat-list-item>
+                    </mat-list>
+      </mat-sidenav>
+  
+    <mat-sidenav-content>
+     <router-outlet>
+     </router-outlet>
+      </mat-sidenav-content>
+
+    </mat-sidenav-container>    
+  
+    <mat-toolbar class="example-footer" color="primary">Footer</mat-toolbar>
 </ng-container>
