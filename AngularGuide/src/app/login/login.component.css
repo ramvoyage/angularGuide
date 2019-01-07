@@ -1,9 +1,15 @@
 .my-form{
-    min-width: 150px;
+    min-width: 100px;
     max-width: 500px;
     width: 100%;
   }
    
   .full-width {
     width: 100%;
+  }
+
+  .center {
+    margin: auto;
+    width: 37%;
+    padding: 150px;
   }
