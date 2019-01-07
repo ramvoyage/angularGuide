@@ -4,6 +4,7 @@ import {MainLayoutComponent} from '../layout/main-layout/main-layout.component';
 import {DashboardComponent} from './dashboard.component';
 import {HeaderComponent} from '../layout/header/header.component';
 import { RouteModuleComponent } from '../route-module/route-module.component';
+import { FormsComponent } from 'src/app/features/forms/forms.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       {path:'dashboard',component:DashboardComponent},
-      {path: 'route',component:RouteModuleComponent}
+      {path: 'route',component:RouteModuleComponent},
+      {path: 'forms',component:FormsComponent}
 
   ]
   }
